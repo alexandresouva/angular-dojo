@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {SelectorComponent} from './in-depth-guide/components/selector/selector.component';
+import {Component} from '@angular/core';
+
+import {ComponentsComponent} from './topics-containers/components/components.component';
 
 @Component({
   selector: 'app-root',
   imports: [
-    SelectorComponent
+    ComponentsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
