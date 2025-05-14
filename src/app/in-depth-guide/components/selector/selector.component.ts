@@ -13,7 +13,7 @@ import {Component, input, ViewEncapsulation} from '@angular/core';
    * RULE:
    * If multiple selectors are provided, the component matches any of them.
    */
-  selector: '<app-selector>, span, [appBasic], .app, #selector, .example:not(#xpto)',
+  selector: '<dojo-selector>, span, [appBasic], .app, #selector, .example:not(#xpto)',
   imports: [],
   templateUrl: './selector.component.html',
   /*
