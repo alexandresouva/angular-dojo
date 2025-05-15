@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  justify-items: start;
+  border: 1px solid black;
+  padding: 8px;
+  min-width: 360px;
+
+  span {
+    color: brown;
+  }
+}

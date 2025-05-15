@@ -1,0 +1,26 @@
+<p><span>Required string:</span> {{ requiredString() }}</p>
+<p><span>Optional number:</span> {{ optionalNumber() }}</p>
+<p>
+  <span>Optional text with default value:</span>
+  {{ optionalTextWithDefaultValue() }}
+</p>
+<p><span> Text with transform:</span> {{ textWithTransform() }}</p>
+<p><span>Disabled:</span> {{ disabled() }}</p>
+<p><span>Value:</span> {{ value() }}</p>
+<p><span>Public label:</span> {{ privateLabel() }}</p>
+
+<label for="checkbox-model">Checkbox with model input</label>
+<input
+  id="checkbox-model"
+  type="checkbox"
+  (change)="toggleCheckboxModelValue()"
+  [checked]="checkedWithModel()"
+/>
+
+<label for="checkbox-prop">Checkbox with normal property</label>
+<input
+  id="checkbox-prop"
+  type="checkbox"
+  (change)="toggleCheckboxPropValue()"
+  [checked]="checkedWithProp()"
+/>

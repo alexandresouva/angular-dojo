@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Selectors</h2>
+
   <h3>Using different selectors</h3>
   <dojo-selector label="Component affect by custom name"></dojo-selector>
   <span class="app" label="Span affect by tag"></span>
@@ -7,4 +8,25 @@
   <button class="app" label="Button affect by class"></button>
   <p id="selector" label="P affect by id"></p>
   <div class="example" id="xpto">Div not affected</div>
+
+  <hr />
+
+  <h3>Input</h3>
+  <dojo-input
+    requiredString="Some random text"
+    textWithTransform=" Text with some blank spaces  "
+    [(checkedWithModel)]="checkedWithSignal"
+  ></dojo-input>
+  <dojo-input
+    requiredString="Another text"
+    [optionalNumber]="4"
+    optionalTextWithDefaultValue="Hello there!"
+    [(checkedWithModel)]="checkedWithSignal"
+  ></dojo-input>
+  <dojo-input
+    requiredString="Last example"
+    [(checkedWithModel)]="checkedWithSignal"
+    [(checkedWithProp)]="checkedWithProp"
+    (checkedWithPropChange)="loggerCheckedChange($event)"
+  ></dojo-input>
 </div>
