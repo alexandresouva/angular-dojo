@@ -6,8 +6,8 @@
   <span class="app" label="Span affect by tag"></span>
   <div appBasic label="Div affect by attribute"></div>
   <button class="app" label="Button affect by class"></button>
-  <p id="selector" label="P affect by id"></p>
-  <div class="example" id="xpto">Div not affected</div>
+  <!--  <p id="selector" label="P affect by id"></p>-->
+  <!--  <div class="example" id="xpto">Div not affected</div>-->
 
   <hr />
 
@@ -29,4 +29,7 @@
     [(checkedWithProp)]="checkedWithProp"
     (checkedWithPropChange)="loggerCheckedChange($event)"
   ></dojo-input>
+
+  <h3>Output</h3>
+  <dojo-output (toggled)="loggerToggleEvent($event)"></dojo-output>
 </div>
