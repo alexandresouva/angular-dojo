@@ -3,6 +3,7 @@ import { SelectorComponent } from '../../in-depth-guide/components/selector/sele
 import { InputComponent } from '../../in-depth-guide/components/input/input.component';
 import { OutputComponent } from '../../in-depth-guide/components/output/output.component';
 import { ContentComponent } from '../../in-depth-guide/components/content/content.component';
+import { HostComponent } from '../../in-depth-guide/components/host/host.component';
 
 @Component({
   selector: 'dojo-components',
@@ -11,6 +12,7 @@ import { ContentComponent } from '../../in-depth-guide/components/content/conten
     InputComponent,
     OutputComponent,
     ContentComponent,
+    HostComponent,
   ],
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss',
