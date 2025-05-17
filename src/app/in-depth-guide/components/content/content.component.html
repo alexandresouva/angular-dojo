@@ -1,0 +1,26 @@
+<!--
+    Notes:
+    - ng-content works like a slot (web-components)
+    - the <ng-content> is a placeholder, not a component nor DOM element.
+    - Angular's compiler processes all <ng-content> elements at build-time.
+    - select accepts the same CSS selector as component selectors
+-->
+<header>
+  <ng-content select="dojo-output">
+    <!-- Fallback -->
+    I'm a default value for dojo-output. You can override me using the
+    dojo-output selector.</ng-content
+  >
+</header>
+
+<section>
+  <ng-content select="[content-body]">
+    I'm a default value. You can override me using the "content-body" attribute
+  </ng-content>
+</section>
+
+<footer>
+  <ng-content select=".content-footer">
+    I'm a default value. You can override me using the "content-footer" class
+  </ng-content>
+</footer>

@@ -8,9 +8,11 @@
   <button class="app" label="Button affect by class"></button>
   <!--  <p id="selector" label="P affect by id"></p>-->
   <!--  <div class="example" id="xpto">Div not affected</div>-->
+</div>
 
-  <hr />
+<hr />
 
+<div class="container">
   <h3>Input</h3>
   <dojo-input
     requiredString="Some random text"
@@ -29,7 +31,31 @@
     [(checkedWithProp)]="checkedWithProp"
     (checkedWithPropChange)="loggerCheckedChange($event)"
   ></dojo-input>
+</div>
 
+<hr />
+
+<div class="container">
   <h3>Output</h3>
   <dojo-output (toggled)="loggerToggleEvent($event)"></dojo-output>
+</div>
+
+<hr />
+
+<div class="container">
+  <h3>ng-content</h3>
+  <dojo-content>
+    <dojo-output (toggled)="loggerToggleEvent($event)"></dojo-output>
+    <p content-body>This text will be rendered in the middle</p>
+    <ng-container class="content-footer">
+      This text will be rendered in the footer</ng-container
+    >
+  </dojo-content>
+
+  <dojo-content>
+    <!-- There is a way to break the rule, using ngProjectAs -->
+    <p ngProjectAs="dojo-output">
+      Hello! I'm not a dojo-output, but I'm fake it.
+    </p>
+  </dojo-content>
 </div>
