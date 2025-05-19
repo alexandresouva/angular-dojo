@@ -4,6 +4,7 @@ import { InputComponent } from '../../in-depth-guide/components/input/input.comp
 import { OutputComponent } from '../../in-depth-guide/components/output/output.component';
 import { ContentComponent } from '../../in-depth-guide/components/content/content.component';
 import { HostComponent } from '../../in-depth-guide/components/host/host.component';
+import { LifecycleComponent } from '../../in-depth-guide/components/lifecycle/lifecycle.component';
 
 @Component({
   selector: 'dojo-components',
@@ -13,13 +14,15 @@ import { HostComponent } from '../../in-depth-guide/components/host/host.compone
     OutputComponent,
     ContentComponent,
     HostComponent,
+    LifecycleComponent,
   ],
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss',
 })
 export class ComponentsComponent {
-  checkedWithSignal = signal(false);
-  checkedWithProp = false;
+  protected checkedWithSignal = signal(false);
+  protected checkedWithProp = false;
+  protected number = 0;
 
   constructor() {
     effect(() => {
@@ -27,11 +30,11 @@ export class ComponentsComponent {
     });
   }
 
-  loggerCheckedChange(checked: boolean): void {
+  protected loggerCheckedChange(checked: boolean): void {
     console.log('loggerCheckedChange: ', checked);
   }
 
-  loggerToggleEvent(toggled: boolean): void {
+  protected loggerToggleEvent(toggled: boolean): void {
     console.log(`toggled: ${toggled}`);
   }
 }

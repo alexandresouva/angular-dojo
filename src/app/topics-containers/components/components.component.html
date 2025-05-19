@@ -11,7 +11,6 @@
 </div>
 
 <hr />
-
 <div class="container">
   <h3>Input</h3>
   <dojo-input
@@ -34,14 +33,12 @@
 </div>
 
 <hr />
-
 <div class="container">
   <h3>Output</h3>
   <dojo-output (toggled)="loggerToggleEvent($event)"></dojo-output>
 </div>
 
 <hr />
-
 <div class="container">
   <h3>ng-content</h3>
   <dojo-content>
@@ -61,8 +58,14 @@
 </div>
 
 <hr />
-
 <div class="container">
   <h3>Host</h3>
   <dojo-host></dojo-host>
+</div>
+
+<hr />
+<div class="container">
+  <h3>Lifecycle</h3>
+  <dojo-lifecycle [number]="number"></dojo-lifecycle>
+  <button (click)="number = number + 1">Increment number</button>
 </div>

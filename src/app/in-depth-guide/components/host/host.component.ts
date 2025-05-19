@@ -6,7 +6,7 @@ import { Component, computed, signal } from '@angular/core';
   template: `<progress [value]="value()" [attr.max]="maxValue"></progress>`,
   // The DOM element that matches a component's selector is that component's host element.
   host: {
-    '[attr.aria-label]': '"Progresso do carregamento"',
+    '[attr.aria-label]': '"Loading progress"',
     '[class.complete]': 'isComplete()',
     '(click)': 'increment()',
   },
