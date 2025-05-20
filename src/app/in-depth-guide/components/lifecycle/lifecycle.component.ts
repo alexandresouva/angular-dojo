@@ -34,6 +34,7 @@ export class LifecycleComponent
     AfterViewChecked,
     OnDestroy
 {
+  private readonly destroyRef = inject(DestroyRef);
   /*
    * Notes:
    * - A component's lifecycle is the sequence of steps that happen between
@@ -68,11 +69,11 @@ export class LifecycleComponent
   constructor() {
     this.logPhase('Creation Phase');
     this.logLifecycleHook(
-      'constructor runs when Angular instantiates the component.',
+      'constructor runs when Angular instantiates the component.'
     );
 
     effect(() => {
-      inject(DestroyRef).onDestroy(() => {
+      this.destroyRef.onDestroy(() => {
         // Tip: DestroyRef injection can be used outside this component
         this.logLifecycleHook('onDestroy using DestroyRef');
       });
@@ -82,50 +83,50 @@ export class LifecycleComponent
   ngOnInit() {
     this.logPhase('Change Detection Phase');
     this.logLifecycleHook(
-      "ngOnInit runs once after Angular has initialized all the component's inputs.",
+      "ngOnInit runs once after Angular has initialized all the component's inputs."
     );
   }
 
   ngOnChanges(changes: SimpleChanges) {
     this.logLifecycleHook(
-      "ngOnChanges runs every time the component's inputs have changed.",
+      "ngOnChanges runs every time the component's inputs have changed."
     );
   }
 
   ngDoCheck() {
     this.logLifecycleHook(
-      'ngDoCheck runs every time this component is checked for changes.',
+      'ngDoCheck runs every time this component is checked for changes.'
     );
   }
 
   ngAfterContentInit() {
     this.logLifecycleHook(
-      "ngAfterContentInit runs once after the component's content has been initialized.",
+      "ngAfterContentInit runs once after the component's content has been initialized."
     );
   }
 
   ngAfterContentChecked() {
     this.logLifecycleHook(
-      'ngAfterContentChecked runs every time this component content has been checked for changes.',
+      'ngAfterContentChecked runs every time this component content has been checked for changes.'
     );
   }
 
   ngAfterViewInit() {
     this.logLifecycleHook(
-      "ngAfterViewInit runs once after the component's view has been initialized.",
+      "ngAfterViewInit runs once after the component's view has been initialized."
     );
   }
 
   ngAfterViewChecked() {
     this.logLifecycleHook(
-      "ngAfterViewChecked runs every time the component's view has been checked for changes.",
+      "ngAfterViewChecked runs every time the component's view has been checked for changes."
     );
   }
 
   ngOnDestroy() {
     this.logPhase('Destruction Phase');
     this.logLifecycleHook(
-      'ngOnDestroy runs just before Angular destroys the component.',
+      'ngOnDestroy runs just before Angular destroys the component.'
     );
   }
 }
