@@ -9,15 +9,12 @@ project-root/
 │   │   ├── login.feature
 │   │   └── users.feature
 │   │
-│   ├── steps/                            # Step definitions for feature files
+│   ├── step-definitions/                 # Step definitions for feature files
 │   │   ├── login.steps.ts
 │   │   └── users.steps.ts
 │   │
 │   ├── fixtures/                         # Mock data used in tests
 │   │   └── users.json
-│   │
-│   ├── pages/                            # Page objects (optional but useful)
-│   │   └── LoginPage.ts
 │   │
 │   ├── support/                          # Global test config and custom commands
 │   │   ├── commands.ts
