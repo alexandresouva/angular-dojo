@@ -23,26 +23,6 @@ project-root/
 │   │       ├── navigation.steps.ts
 │   │       └── setup.steps.ts
 
-├── e2e/                                  # 🧪 Cypress E2E tests with BDD (Cucumber)
-│   ├── features/                         # Gherkin feature files
-│   │   ├── login.feature
-│   │   └── users.feature
-│   │
-│   ├── step-definitions/                 # Step definitions for feature files
-│   │   ├── login.steps.ts
-│   │   └── users.steps.ts
-│   │
-│   ├── fixtures/                         # Mock data used in tests
-│   │   └── users.json
-│   │
-│   ├── support/                          # Global test config and custom commands
-│   │   ├── commands.ts
-│   │   ├── e2e.ts                        # Cypress setup file
-│   │   └── environment.ts
-│   │
-│   ├── cypress.config.ts                 # Cypress configuration file
-│   └── tsconfig.json                     # TypeScript config for e2e tests
-
 ├── src/
 │   ├── app/
 │   │   ├── core/                         # 🧠 Global application logic
