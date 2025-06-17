@@ -6,6 +6,25 @@ project-root/
 
 ├── e2e/                                  # 🧪 Cypress E2E tests with BDD (Cucumber)
 │   ├── features/                         # Gherkin feature files
+│   │   ├── login/
+│   │   │   └── login.feature
+│   │   ├── users/
+│   │   │   └── users.feature
+│   │   └── common/                       # Common features (setup, navigation, context)
+│   │       ├── navigation.feature
+│   │       └── setup.feature
+│   │
+│   ├── step-definitions/                 # Step definitions for feature files
+│   │   ├── login/
+│   │   │   └── login.steps.ts
+│   │   ├── users/
+│   │   │   └── users.steps.ts
+│   │   └── common/                       # Common step definitions (setup, navigation, helpers)
+│   │       ├── navigation.steps.ts
+│   │       └── setup.steps.ts
+
+├── e2e/                                  # 🧪 Cypress E2E tests with BDD (Cucumber)
+│   ├── features/                         # Gherkin feature files
 │   │   ├── login.feature
 │   │   └── users.feature
 │   │
