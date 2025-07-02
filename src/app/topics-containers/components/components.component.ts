@@ -5,6 +5,7 @@ import { OutputComponent } from '../../in-depth-guide/components/output/output.c
 import { ContentComponent } from '../../in-depth-guide/components/content/content.component';
 import { HostComponent } from '../../in-depth-guide/components/host/host.component';
 import { LifecycleComponent } from '../../in-depth-guide/components/lifecycle/lifecycle.component';
+import { QueriesComponent } from '../../in-depth-guide/components/queries/queries.component';
 
 @Component({
   selector: 'dojo-components',
@@ -15,6 +16,7 @@ import { LifecycleComponent } from '../../in-depth-guide/components/lifecycle/li
     ContentComponent,
     HostComponent,
     LifecycleComponent,
+    QueriesComponent,
   ],
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss',
